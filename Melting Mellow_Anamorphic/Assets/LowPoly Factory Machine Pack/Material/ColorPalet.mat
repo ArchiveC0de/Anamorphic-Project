@@ -49,7 +49,6 @@ Material:
   - _OUTLINEWIDTHAFFECTEDBYVIEWDISTANCE_OFF
   - _PSGLOTEX_OFF
   - _SELFSHADOWAFFECTEDBYLIGHTSHADOWSTRENGTH_OFF
-  - _SELFSHADOWSHADOWTATVIEWDIRECTION_OFF
   - _SHOWNORMAL_OFF
   - _SPECMODE_OFF
   - _SPECULAR_SETUP
@@ -574,7 +573,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _OutlineWidth: 0.5
+    - _OutlineWidth: 3
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _Outline_Width: 0
@@ -631,7 +630,7 @@ Material:
     - _SelfShadowHardness: 1
     - _SelfShadowRealTimeShadowColorPower: 1
     - _SelfShadowRealtimeShadowIntensity: 1
-    - _SelfShadowShadowTAtViewDirection: 0
+    - _SelfShadowShadowTAtViewDirection: 1
     - _SelfShadowThreshold: 0.93
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0
