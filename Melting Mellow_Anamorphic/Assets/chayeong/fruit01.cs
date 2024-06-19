@@ -31,7 +31,7 @@ public class fruit01 : MonoBehaviour
         }
         if(dish)
         {
-            gameObject.transform.position = GameObject.Find("handGrab").transform.position;
+            gameObject.transform.position = GameObject.Find("dish").transform.position;
         }
     }
 
@@ -53,7 +53,9 @@ public class fruit01 : MonoBehaviour
     {
         yield return new WaitForSeconds(8f);
 
+        handGrab = false;
         dish = false;
+
         gameObject.transform.position = spawnPos.position;
     }
 

@@ -5,18 +5,21 @@ using UnityEngine;
 public class fruit02 : MonoBehaviour
 {
     private GameObject hand;
+    public GameObject topping;
+    public GameObject owl;
 
     private Vector3 handPos;
-    public Transform spawnPos;
+    Vector3 startPos;
 
     private bool handGrab;
-    private bool dish;
+    private bool cheese;
+
 
     void Start()
     {
         hand = GameObject.Find("Bone.011_end");
 
-        StartCoroutine(strawberryActive());
+        startPos = gameObject.transform.position;
     }
 
     void Update()
@@ -27,6 +30,20 @@ public class fruit02 : MonoBehaviour
         {
             gameObject.transform.position = new Vector3(handPos.x + 0.3f, handPos.y, handPos.z);
         }
+        if (cheese)
+        {
+            gameObject.transform.position = startPos;
+            cheese = false;
+        }
+
+
+        //if (pos.x <= cubeCheeseColl.bounds.max.x && pos.x >= cubeCheeseColl.bounds.max.x
+        //    && pos.y <= cubeCheeseColl.bounds.max.y && pos.y >= cubeCheeseColl.bounds.max.y
+        //    && pos.z <= cubeCheeseColl.bounds.max.z && pos.z >= cubeCheeseColl.bounds.max.z)
+        //{
+        //    handGrab = false;   
+        //    gameObject.transform.position = startPos;
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,47 +52,38 @@ public class fruit02 : MonoBehaviour
         {
             handGrab = true;
         }
-        if (other.gameObject.CompareTag("dish"))
+        if(other.gameObject.CompareTag("cheese"))
         {
-            dish = true;
-        }
-    }
+            Animator toppingAni = topping.GetComponent<Animator>();
+            toppingAni.SetTrigger("toppingActive");
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("dish") && dish)
-        {
+            Animator owlAni = owl.GetComponent<Animator>();
+            owlAni.SetTrigger("toppingOwl");
             handGrab = false;
-            gameObject.transform.position = other.transform.position;
+            cheese = true;
         }
-
-    }
-
-    IEnumerator strawberryActive()
-    {
-        yield return new WaitForSeconds(4f);
-
-        gameObject.GetComponent<MeshRenderer>().enabled = true;
-        gameObject.GetComponent<Collider>().enabled = true;
-
-        StartCoroutine(strawberrySpawn());
-        StopCoroutine(strawberryActive());
-    }
-
-    IEnumerator strawberrySpawn()
-    {
-        yield return new WaitForSeconds(8f);
-
-        dish = false;
-        gameObject.transform.position = spawnPos.position;
     }
 
 
-    //private void OnTriggerStay(Collider other)
+    //IEnumerator strawberryActive()
     //{
-    //    if (other.gameObject.CompareTag("hand"))
-    //    {
-    //        gameObject.transform.position = new Vector3(other.transform.position.x + 0.3f, transform.position.y, other.transform.position.z);
-    //    }
+    //    yield return new WaitForSeconds(4f);
+
+    //    gameObject.GetComponent<MeshRenderer>().enabled = true;
+    //    gameObject.GetComponent<Collider>().enabled = true;
+
+    //    StartCoroutine(strawberrySpawn());
+    //    StopCoroutine(strawberryActive());
     //}
+
+    //IEnumerator strawberrySpawn()
+    //{
+    //    yield return new WaitForSeconds(8f);
+
+    //    handGrab = false;
+    //    dish = false;
+    //    gameObject.transform.position = spawnPos.position;
+    //}
+
+
 }
