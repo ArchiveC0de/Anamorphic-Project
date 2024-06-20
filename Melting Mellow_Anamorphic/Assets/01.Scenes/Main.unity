@@ -955,6 +955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettersNeon01_E
       objectReference: {fileID: 0}
+    - target: {fileID: 8690829739244738889, guid: 748246ca8d854b94da04c226cee22dac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1424,7 +1428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &212234783
 Transform:
   m_ObjectHideFlags: 0
@@ -2437,6 +2441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettersNeon01_M
       objectReference: {fileID: 0}
+    - target: {fileID: 5265623014850842059, guid: 995d3e75885c35f4f9134abd0ff8cce6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5914277770269158430, guid: 995d3e75885c35f4f9134abd0ff8cce6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2628,6 +2636,10 @@ PrefabInstance:
     - target: {fileID: 3362145055342190222, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
       propertyPath: m_Name
       value: LettersNeon01_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362145055342190222, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3866412218613399387, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4064,6 +4076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettersNeon01_L
       objectReference: {fileID: 0}
+    - target: {fileID: 3362145055342190222, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3866412218613399387, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4129,6 +4145,10 @@ PrefabInstance:
     - target: {fileID: 5313218789334881629, guid: 0ef21adaad39e5e48ac2a13ea77fd800, type: 3}
       propertyPath: m_Name
       value: LettersNeon01_I
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313218789334881629, guid: 0ef21adaad39e5e48ac2a13ea77fd800, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5961820492776289416, guid: 0ef21adaad39e5e48ac2a13ea77fd800, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4922,6 +4942,55 @@ Transform:
   - {fileID: 1360694230}
   m_Father: {fileID: 16617797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1104181894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104181896}
+  - component: {fileID: 1104181895}
+  m_Layer: 0
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1104181895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104181894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476528d7128a2e74b97158e08a8dfd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portName: COM3
+  baudRate: 9600
+  targetObjects:
+  - {fileID: 1717806359}
+  - {fileID: 3208865530858699205}
+--- !u!4 &1104181896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104181894}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.7858422, y: -2.6979113, z: 8.711526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1105779521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5071,6 +5140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettersNeon01_G
       objectReference: {fileID: 0}
+    - target: {fileID: 1537229779993493366, guid: 321a9bc53c742cb45a53c60dfaf3c21b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2170320485250344396, guid: 321a9bc53c742cb45a53c60dfaf3c21b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.9996567
@@ -5200,6 +5273,10 @@ PrefabInstance:
     - target: {fileID: 1294660349007878642, guid: 1042c8169631c844caa831fd938006ba, type: 3}
       propertyPath: m_Name
       value: LettersNeon01_N
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294660349007878642, guid: 1042c8169631c844caa831fd938006ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1926518192509125448, guid: 1042c8169631c844caa831fd938006ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5476,6 +5553,10 @@ PrefabInstance:
     - target: {fileID: 2835534735683425981, guid: a801c255a110014488373e43490e11ef, type: 3}
       propertyPath: m_Name
       value: LettersNeon01_O
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835534735683425981, guid: a801c255a110014488373e43490e11ef, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3175608920802675719, guid: a801c255a110014488373e43490e11ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5814,6 +5895,10 @@ PrefabInstance:
     - target: {fileID: 1228352424521255733, guid: a005c0ec3f934f34d951987e9d3a200e, type: 3}
       propertyPath: m_Name
       value: LettersNeon01_T
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228352424521255733, guid: a005c0ec3f934f34d951987e9d3a200e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1891560948798591375, guid: a005c0ec3f934f34d951987e9d3a200e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7263,6 +7348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettersNeon01_W
       objectReference: {fileID: 0}
+    - target: {fileID: 754571753626966528, guid: 6b1e99aa3f788be4c9f9e58bf40729e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1258821461541731285, guid: 6b1e99aa3f788be4c9f9e58bf40729e3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7795,6 +7884,10 @@ PrefabInstance:
     - target: {fileID: 3362145055342190222, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
       propertyPath: m_Name
       value: LettersNeon01_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362145055342190222, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3866412218613399387, guid: 2786fb3daeecf364dae288cc2d1a029b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8453,6 +8546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettersNeon01_M
       objectReference: {fileID: 0}
+    - target: {fileID: 5265623014850842059, guid: 995d3e75885c35f4f9134abd0ff8cce6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5914277770269158430, guid: 995d3e75885c35f4f9134abd0ff8cce6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8715,6 +8812,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d0fe3bc218d3348bbbb754293a48d8, type: 3}
+--- !u!1 &1717806359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7643300543587532795, guid: e4d0fe3bc218d3348bbbb754293a48d8, type: 3}
+  m_PrefabInstance: {fileID: 1717806358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1719930159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8371818745167623161, guid: 9fc90939effcc4af99d08040861c21a1, type: 3}
@@ -8858,7 +8960,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -10129,15 +10231,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 64af879058891d44c8510ae4d10b862f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.70000017
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64af879058891d44c8510ae4d10b862f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000017
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64af879058891d44c8510ae4d10b862f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.70000017
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64af879058891d44c8510ae4d10b862f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10539,6 +10641,10 @@ PrefabInstance:
     - target: {fileID: 8690829739244738889, guid: 748246ca8d854b94da04c226cee22dac, type: 3}
       propertyPath: m_Name
       value: LettersNeon01_E
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690829739244738889, guid: 748246ca8d854b94da04c226cee22dac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18673,3 +18779,4 @@ SceneRoots:
   - {fileID: 1996089595}
   - {fileID: 1143388552}
   - {fileID: 2062761634}
+  - {fileID: 1104181896}
