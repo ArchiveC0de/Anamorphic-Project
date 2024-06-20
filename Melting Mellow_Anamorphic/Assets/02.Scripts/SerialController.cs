@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class SerialController : MonoBehaviour
 {
+    public SoundManager SoundManager;
+
     public string portName = "COM3"; // 아두이노가 연결된 포트 번호
     public int baudRate = 9600;
     private SerialPort serialPort;
@@ -45,8 +47,7 @@ public class SerialController : MonoBehaviour
         {
             while (serialQueue.Count > 0)
             {
-                
-
+                SoundManager.Instance.ButtonSoundPlay();
                 string data = serialQueue.Dequeue();
                 if (data == "1" )
                 {
@@ -54,15 +55,13 @@ public class SerialController : MonoBehaviour
                     {
                         StopAnimations();
                         play = false;
+                        SoundManager.Instance.ShoutterSoundPlay();
                         return;
                     }
-
                     play = true;
                     Debug.Log("통신");
                     PlayAnimations();
                 }
-
-                
             }
         }
     }
@@ -93,10 +92,13 @@ public class SerialController : MonoBehaviour
 
     void PlayAnimations()
     {
+        SoundManager.Instance.NeonSoundPlay();
+        SoundManager.Instance.ShoutterSoundPlay();
         foreach (var animator in animators)
         {
-            animator.SetBool("PlayAnimation",true);
+            animator.SetBool("PlayAnimation", true);
         }
+        Invoke("MainSound",2);
     }
 
     void StopAnimations()
@@ -105,6 +107,8 @@ public class SerialController : MonoBehaviour
         {
             animator.SetBool("PlayAnimation", false);
         }
+        SoundManager.Instance.StopAllCoroutines();
+        SoundManager.Instance.MainSoundStop();
     }
 
     void OnApplicationQuit()
@@ -119,5 +123,10 @@ public class SerialController : MonoBehaviour
         {
             serialPort.Close();
         }
+    }
+
+    void MainSound()
+    {
+        SoundManager.Instance.MainSoundPlay();
     }
 }

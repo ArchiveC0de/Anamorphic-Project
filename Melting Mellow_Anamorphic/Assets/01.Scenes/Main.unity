@@ -2325,6 +2325,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -5913172463669914825, guid: 9fc90939effcc4af99d08040861c21a1, type: 3}
   m_PrefabInstance: {fileID: 883624762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &282988680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282988682}
+  - component: {fileID: 282988681}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &282988681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282988680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd62dd445c4555469797ee77f0f7773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainBGM: {fileID: 8300000, guid: eaf13b82930bb45c49ae6bbc616faffd, type: 3}
+  NeonBGM: {fileID: 8300000, guid: c6b898c26adc544c8853887e6776cc81, type: 3}
+  ButtonBGM: {fileID: 8300000, guid: cfcc388b238174f71896a581923cb290, type: 3}
+  ShoutterBGM: {fileID: 8300000, guid: 6ac34d7d5ecdbca46a8387adefb15771, type: 3}
+--- !u!4 &282988682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282988680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.9205937, y: -8.920286, z: -10.212716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286280699
 GameObject:
   m_ObjectHideFlags: 0
@@ -7033,11 +7081,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476528d7128a2e74b97158e08a8dfd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM3
+  SoundManager: {fileID: 282988681}
+  portName: COM5
   baudRate: 9600
   targetObjects:
-  - {fileID: 1717806359}
   - {fileID: 3208865530858699205}
+  - {fileID: 1717806359}
 --- !u!4 &1104181896
 Transform:
   m_ObjectHideFlags: 0
@@ -11225,7 +11274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643300543587532795, guid: e4d0fe3bc218d3348bbbb754293a48d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20481,3 +20530,4 @@ SceneRoots:
   - {fileID: 1143388552}
   - {fileID: 2062761634}
   - {fileID: 1104181896}
+  - {fileID: 282988682}
