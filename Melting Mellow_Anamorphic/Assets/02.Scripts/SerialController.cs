@@ -14,6 +14,7 @@ public class SerialController : MonoBehaviour
     private Animator[] animators;
     private Thread serialThread;
     private bool keepReading;
+    private bool play = false;
     private Queue<string> serialQueue = new Queue<string>();
 
     void Start()
@@ -44,12 +45,24 @@ public class SerialController : MonoBehaviour
         {
             while (serialQueue.Count > 0)
             {
+                
+
                 string data = serialQueue.Dequeue();
-                if (data == "1")
+                if (data == "1" )
                 {
+                    if (play == true)
+                    {
+                        StopAnimations();
+                        play = false;
+                        return;
+                    }
+
+                    play = true;
                     Debug.Log("Ελ½Ε");
                     PlayAnimations();
                 }
+
+                
             }
         }
     }
@@ -83,6 +96,14 @@ public class SerialController : MonoBehaviour
         foreach (var animator in animators)
         {
             animator.SetBool("PlayAnimation",true);
+        }
+    }
+
+    void StopAnimations()
+    {
+        foreach(var animator in animators)
+        {
+            animator.SetBool("PlayAnimation", false);
         }
     }
 
