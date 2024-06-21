@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip NeonBGM;
     public AudioClip ButtonBGM;
     public AudioClip ShoutterBGM;
+    public AudioClip AnamorphicBGM;
 
     private List<AudioSource> audioSources = new List<AudioSource>();
 
@@ -21,7 +22,7 @@ public class SoundManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            for (int i = 0; i < 4; i++) // ÇÊ¿ä¿¡ µû¶ó AudioSourceÀÇ ¼ö¸¦ Á¶Á¤ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+            for (int i = 0; i < 4; i++) // ï¿½Ê¿ä¿¡ ï¿½ï¿½ï¿½ï¿½ AudioSourceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
             {
                 AudioSource audioSource = gameObject.AddComponent<AudioSource>();
                 audioSources.Add(audioSource);
@@ -42,7 +43,7 @@ public class SoundManager : MonoBehaviour
                 return audioSource;
             }
         }
-        // ¸ðµç AudioSource°¡ Àç»ý ÁßÀÎ °æ¿ì, Ã¹ ¹øÂ° AudioSource¸¦ »ç¿ë (ÇÊ¿ä¿¡ µû¶ó Á¶Á¤ °¡´É)
+        // ï¿½ï¿½ï¿½ AudioSourceï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, Ã¹ ï¿½ï¿½Â° AudioSourceï¿½ï¿½ ï¿½ï¿½ï¿½ (ï¿½Ê¿ä¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
         return audioSources[0];
     }
 
@@ -50,7 +51,7 @@ public class SoundManager : MonoBehaviour
     {
         AudioSource audioSource = GetAvailableAudioSource();
         audioSource.clip = clip;
-        audioSource.loop = loop; // loop ¼³Á¤
+        audioSource.loop = loop; // loop ï¿½ï¿½ï¿½ï¿½
         audioSource.Play();
     }
 
@@ -65,10 +66,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    #region »ç¿îµå ÇÃ·¹ÀÌ
+    #region ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½
     public void MainSoundPlay()
     {
-        PlaySound(MainBGM, true); // MainBGM ¹«ÇÑ ¹Ýº¹
+        PlaySound(MainBGM, true); // MainBGM ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½
     }
 
     public void NeonSoundPlay()
@@ -85,9 +86,14 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(ShoutterBGM);
     }
+
+    public void AnamolphicSoundPlay()
+    {
+        PlaySound(AnamorphicBGM);
+    }
     #endregion
 
-    #region »ç¿îµå Á¾·á
+    #region ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void MainSoundStop()
     {
         StopSpecificSound(MainBGM);
@@ -107,6 +113,12 @@ public class SoundManager : MonoBehaviour
     {
         StopSpecificSound(ShoutterBGM);
     }
+
+    public void AnamolphicSoundStop()
+    {
+        StopSpecificSound(AnamorphicBGM);
+    }
+
 
     private void StopSpecificSound(AudioClip clip)
     {
