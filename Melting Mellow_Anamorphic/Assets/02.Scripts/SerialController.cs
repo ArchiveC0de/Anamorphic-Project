@@ -13,7 +13,9 @@ public class SerialController : MonoBehaviour
     public int baudRate = 9600;
     private SerialPort serialPort;
     public GameObject[] targetObjects; // 애니메이션을 실행할 오브젝트 배열
+    public GameObject[] delayAni;
     private Animator[] animators;
+    private Animator[] delayAni2;
     private Thread serialThread;
     private bool keepReading;
     private bool play = false;
@@ -28,6 +30,17 @@ public class SerialController : MonoBehaviour
             if (animators[i] == null)
             {
                 Debug.LogError("Animator 컴포넌트를 찾을 수 없습니다: " + targetObjects[i].name);
+                return;
+            }
+        }
+
+        delayAni2 = new Animator[delayAni.Length];
+        for (int i = 0; i < delayAni.Length; i++)
+        {
+            delayAni2[i] = delayAni[i].GetComponent<Animator>();
+            if (delayAni2[i] == null)
+            {
+                Debug.LogError("Animator 컴포넌트를 찾을 수 없습니다: " + delayAni[i].name);
                 return;
             }
         }
@@ -61,6 +74,7 @@ public class SerialController : MonoBehaviour
                     play = true;
                     Debug.Log("통신");
                     PlayAnimations();
+                    Invoke("DelayAnimation", 2);
                 }
             }
         }
@@ -107,6 +121,10 @@ public class SerialController : MonoBehaviour
         {
             animator.SetBool("PlayAnimation", false);
         }
+        foreach (var animator in delayAni2)
+        {
+            animator.SetBool("PlayAnimation", false);
+        }
         SoundManager.Instance.StopAllCoroutines();
         SoundManager.Instance.MainSoundStop();
     }
@@ -128,5 +146,13 @@ public class SerialController : MonoBehaviour
     void MainSound()
     {
         SoundManager.Instance.MainSoundPlay();
+    }
+
+    void DelayAnimation()
+    {
+        foreach (var animator in delayAni2)
+        {
+            animator.SetBool("PlayAnimation", true);
+        }
     }
 }
