@@ -2438,7 +2438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd62dd445c4555469797ee77f0f7773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainBGM: {fileID: 8300000, guid: eaf13b82930bb45c49ae6bbc616faffd, type: 3}
+  MainBGM: {fileID: 8300000, guid: f7255ad7a5b28614894009f6a34b8319, type: 3}
   NeonBGM: {fileID: 8300000, guid: c6b898c26adc544c8853887e6776cc81, type: 3}
   ButtonBGM: {fileID: 8300000, guid: cfcc388b238174f71896a581923cb290, type: 3}
   ShoutterBGM: {fileID: 8300000, guid: 6ac34d7d5ecdbca46a8387adefb15771, type: 3}
@@ -7527,7 +7527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1104181895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7541,7 +7541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundManager: {fileID: 282988681}
-  portName: COM5
+  portName: COM3
   baudRate: 9600
   targetObjects:
   - {fileID: 3208865530858699205}
