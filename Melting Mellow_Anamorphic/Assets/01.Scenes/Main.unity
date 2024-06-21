@@ -1212,6 +1212,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &134419498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 134419499}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &134419499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134419498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4225437, y: -0.24815768, z: 0.3218826}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &141531200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2443,6 +2474,7 @@ MonoBehaviour:
   NeonBGM: {fileID: 8300000, guid: c6b898c26adc544c8853887e6776cc81, type: 3}
   ButtonBGM: {fileID: 8300000, guid: cfcc388b238174f71896a581923cb290, type: 3}
   ShoutterBGM: {fileID: 8300000, guid: 6ac34d7d5ecdbca46a8387adefb15771, type: 3}
+  AnamorphicBGM: {fileID: 8300000, guid: c5375aa4245db4f7ba80cc8e4837d70f, type: 3}
 --- !u!4 &282988682
 Transform:
   m_ObjectHideFlags: 0
@@ -3343,6 +3375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399432955}
   - component: {fileID: 399432956}
+  - component: {fileID: 399432957}
   m_Layer: 0
   m_Name: Anamorphic
   m_TagString: Untagged
@@ -3387,6 +3420,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &399432957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399432954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b54144f155a44541b542df21c329877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &406936918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7351274797125023649, guid: 9fc90939effcc4af99d08040861c21a1, type: 3}
@@ -7450,7 +7495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1104181895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26472,3 +26517,4 @@ SceneRoots:
   - {fileID: 1104181896}
   - {fileID: 282988682}
   - {fileID: 1700422378}
+  - {fileID: 134419499}
