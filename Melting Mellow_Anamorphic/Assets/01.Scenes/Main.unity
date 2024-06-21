@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd62dd445c4555469797ee77f0f7773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainBGM: {fileID: 8300000, guid: eaf13b82930bb45c49ae6bbc616faffd, type: 3}
+  MainBGM: {fileID: 8300000, guid: ff858321232c9420ca988f47adc20b3a, type: 3}
   NeonBGM: {fileID: 8300000, guid: c6b898c26adc544c8853887e6776cc81, type: 3}
   ButtonBGM: {fileID: 8300000, guid: cfcc388b238174f71896a581923cb290, type: 3}
   ShoutterBGM: {fileID: 8300000, guid: 6ac34d7d5ecdbca46a8387adefb15771, type: 3}
