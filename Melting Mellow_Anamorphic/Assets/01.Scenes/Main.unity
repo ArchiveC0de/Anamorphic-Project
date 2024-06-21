@@ -7529,11 +7529,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundManager: {fileID: 282988681}
-  portName: COM3
+  portName: COM13
   baudRate: 9600
   targetObjects:
   - {fileID: 3208865530858699205}
   - {fileID: 1717806359}
+  delayAni:
+  - {fileID: 1337579018}
+  - {fileID: 399432954}
 --- !u!4 &1104181896
 Transform:
   m_ObjectHideFlags: 0
@@ -11572,7 +11575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643300543587532795, guid: e4d0fe3bc218d3348bbbb754293a48d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
